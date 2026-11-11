@@ -1,0 +1,92 @@
+{
+  "Other_exclusive": false,
+  "aggregation_note": "project-defined document representation, not the default single-sequence model pipeline",
+  "attention": "eager",
+  "auxiliary_filter": "existing make_fold grouping and exclusions; no new split",
+  "backbone": "XLMRobertaModel",
+  "chunk_normalization": "L2",
+  "chunk_overlap_tokens": 0,
+  "chunk_policy": "all content tokens, contiguous tokenizer chunks, no document truncation",
+  "classifier": {
+    "C": 1.0,
+    "class_weight": null,
+    "dual": "auto",
+    "loss": "squared_hinge",
+    "max_iter": 10000,
+    "penalty": "l2",
+    "random_state": 42,
+    "tol": 0.0001
+  },
+  "constant_targets": "all-negative -> negative infinity; all-positive -> positive infinity",
+  "course_test_used_for_modeling": false,
+  "decoder": "strictly greater than threshold; argmax fallback separately per level",
+  "development_status": "exploratory; follows prior outer analyses",
+  "document_aggregation": "content-token-weighted mean of normalized chunks, then L2",
+  "embedding_dimension": 768,
+  "encoder_frozen": true,
+  "encoder_mode": "eval",
+  "encoder_precision": "float32",
+  "experiment": "multilingual_encoder_SVM_EN_vs_MULTI_v1",
+  "extraction_batch_size": 2,
+  "feature_standardization": null,
+  "fixed_threshold_comparator": 0.0,
+  "folds": [
+    1,
+    2,
+    3
+  ],
+  "hierarchy_postprocessing": false,
+  "labels_used_during_embedding_extraction": false,
+  "length_includes_special_tokens": true,
+  "limitations": [
+    "More auxiliary documents change sample size and label/domain distributions together.",
+    "Fixed C preserves the solver recipe, not identical effective regularization as sample size changes.",
+    "Lexical duplicate audit does not rule out translations or all paraphrases.",
+    "Comparison with prior English MPNet also changes encoder and chunk length; it is not a pure data ablation.",
+    "One training seed and exploratory outer evaluation."
+  ],
+  "max_length": 128,
+  "model_id": "sentence-transformers/paraphrase-multilingual-mpnet-base-v2",
+  "outer_language": "EN",
+  "planned_classifier_fits": 6,
+  "planned_systems": 2,
+  "pooling": "attention-mask mean pooling including special tokens",
+  "primary_metric": "sample_F1_fine_project_96",
+  "refit_train_plus_validation": false,
+  "revision": "4328cf26390c98c5e3c738b4460a05b95f4911f5",
+  "selection": "sample-F1 on inner validation, separately per level, fold and training condition",
+  "split_version": "v2",
+  "taxonomy_version": "project_v1_96fine",
+  "threshold_grid": [
+    -1.0,
+    -0.9,
+    -0.8,
+    -0.7,
+    -0.6,
+    -0.5,
+    -0.4,
+    -0.3,
+    -0.2,
+    -0.1,
+    0.0,
+    0.1,
+    0.2,
+    0.3,
+    0.5
+  ],
+  "threshold_tie_break": "larger threshold",
+  "training_conditions": {
+    "EN_only": [
+      "EN"
+    ],
+    "EN_plus_auxiliary": [
+      "EN",
+      "BG",
+      "HI",
+      "PT",
+      "RU"
+    ]
+  },
+  "training_seed": 42,
+  "validation_language": "EN"
+}
