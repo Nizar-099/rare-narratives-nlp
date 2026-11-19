@@ -1,0 +1,11 @@
+fascia,sistema,annotazioni_gold,recuperate,falsi_positivi,recall,precision
+0 esempi EN,EN_only,19,0,0,0.0,
+0 esempi EN,EN_plus_auxiliary,19,0,7,0.0,0.0
+1–4 esempi EN,EN_only,210,6,19,0.02857142857142857,0.24
+1–4 esempi EN,EN_plus_auxiliary,210,30,106,0.14285714285714285,0.22058823529411764
+5–9 esempi EN,EN_only,269,46,151,0.17100371747211895,0.233502538071066
+5–9 esempi EN,EN_plus_auxiliary,269,82,178,0.3048327137546468,0.3153846153846154
+10+ esempi EN,EN_only,208,80,185,0.38461538461538464,0.3018867924528302
+10+ esempi EN,EN_plus_auxiliary,208,97,205,0.46634615384615385,0.3211920529801324
+di cui: 1–4 EN e almeno 5 multilingui,EN_only,191,5,17,0.02617801047120419,0.22727272727272727
+di cui: 1–4 EN e almeno 5 multilingui,EN_plus_auxiliary,191,29,104,0.1518324607329843,0.21804511278195488

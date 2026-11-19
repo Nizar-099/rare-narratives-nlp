@@ -1,0 +1,5 @@
+level,condition,F1_soglia_validazione,F1_soglia_zero,articoli_con_predizione_cambiata
+coarse,EN_only,0.5417099747926815,0.5216831761944544,141
+fine,EN_only,0.4406893477332733,0.4343598896230475,126
+coarse,EN_plus_auxiliary,0.5271645925781264,0.5285455702748936,167
+fine,EN_plus_auxiliary,0.4326304054521657,0.41055036581352367,244
